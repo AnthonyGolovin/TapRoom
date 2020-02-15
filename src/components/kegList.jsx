@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Kegs from './Kegs';
 
 const backgroundStyle = {
     backgroundPosition: 'center center',
@@ -17,7 +17,8 @@ const backgroundStyle = {
 
 function KegList(){
     return (
-        <div style={backgroundStyle}>     
+        <div style={backgroundStyle}> 
+        <Kegs></Kegs>    
         </div>
     );    
 }
