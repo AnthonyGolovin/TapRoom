@@ -5,6 +5,28 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+
+var masterKegList = [
+    {
+      names: 'Vodka',
+      brand: 'VodiiRuski Sver',
+      price: '$40',
+      alcoholContent:'Yes'
+    },
+    {
+      names: 'Lean',
+      brand: 'Sprite',
+      price: '$2',
+      alcoholContent:'Yes'
+    },
+    {
+      names: 'Beer',
+      brand: 'Beerlight Bud',
+      price: '0.50',
+      alcoholContent:'Yes'
+    }
+  ];
 
 const moveCard = {
     paddingLeft:'250px',
@@ -20,8 +42,8 @@ const useStyles = makeStyles({
     },
     bullet: {
       display: 'inline-block',
-      margin: '0 2px',
-      transform: 'scale(0.8)',
+      margin: '0 1px',
+      transform: 'scale(0.3)',
     },
     title: {
       fontSize: 14,
@@ -39,11 +61,19 @@ const useStyles = makeStyles({
       <div style={moveCard}>
     <Card className={classes.root} variant="outlined">
     <CardContent>
+    <hr/>
     <form>
         <h3>Kegs:</h3>
             <TextField id="filled-basic" label="Search Kegs" variant="filled" />
       </form> 
+            <hr/>
+            {masterKegList.map((Keg, index) =>
+            <div>
+            <p>{Keg.names}&emsp;<Button  variant="contained" size="small" color="secondary"><Link to="/KegView">View</Link></Button></p>
+            </div>
+      )}
     </CardContent>
+    <hr/>
     <CardActions>
       <Button   variant="contained" size="medium" color="secondary">Add to Cart</Button>
     </CardActions>
