@@ -17,7 +17,14 @@ const backgroundStyle = {
  
 }
 
-function App() {
+class App extends React.Component() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterKegList: []
+    };
+  }
+  render(){
   return (
     
     <div className="App" style={backgroundStyle}>
@@ -28,6 +35,7 @@ function App() {
     </div>
     
   );
+}
 }
 
 export default App;
