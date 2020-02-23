@@ -2,6 +2,7 @@ import { Switch, Route, } from 'react-router-dom';
 import React from 'react';
 import KegList from './components/KegList';
 import KegView from './components/KegView';
+import Error404 from './Error404';
 
 const backgroundStyle = {
   backgroundPosition: 'center center',
@@ -17,25 +18,18 @@ const backgroundStyle = {
  
 }
 
-class App extends React.Component() {
-  constructor(props) {
-    super(props);
-    this.state = {
-      masterKegList: []
-    };
-  }
-  render(){
+function App() {
   return (
     
     <div className="App" style={backgroundStyle}>
       <Switch>
       <Route exact path='/' component={KegList} /> 
       <Route path='/KegView' component={KegView} />
+      <Route component={Error404} />
       </Switch> 
     </div>
     
   );
-}
 }
 
 export default App;
