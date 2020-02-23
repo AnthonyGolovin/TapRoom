@@ -58,7 +58,7 @@ const useStyles = makeStyles({
     const bull = <span className={classes.bullet}>•</span>;
 
   return (
-      <div style={moveCard}>
+      <div className="modeHolder" style={moveCard}>
     <Card className={classes.root} variant="outlined">
     <CardContent>
     <hr/>

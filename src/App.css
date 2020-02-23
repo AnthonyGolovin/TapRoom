@@ -1,6 +1,6 @@
-.darkmode .card {
+.darkmode .card, .darkmode Card, .darkmode CardContent, .darkmode form, .darkmode CardActions, .darkmode Button {
     transition: 0.4s;
-    background-color: #282c34;
+    background-color: #282c34 !important;
     color: #61dafb !important;
 }
 
@@ -10,7 +10,7 @@
 
 .lightmode .card {
     transition: 0.4s;
-    background-color: white;
+    background-color: white !important;
     color: #282c34 !important;
 }
 

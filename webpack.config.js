@@ -28,7 +28,6 @@ module.exports = {
     contentBase: resolve(__dirname, 'build'),
     publicPath: '/'
   },
-
   module: {
     rules: [
       {
@@ -40,6 +39,11 @@ module.exports = {
           emitWarning: true,
           configFile: "./.eslintrc.json"
           }
+        },
+        {
+          test: /.css$/,
+          exclude: /node_modules/,
+          use: ["style-loader", "css-loader"]
         },
         {
         test: /\.jsx?$/,

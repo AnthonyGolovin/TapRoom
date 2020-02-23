@@ -3,7 +3,7 @@ import React from 'react';
 import KegList from './components/KegList';
 import KegView from './components/KegView';
 import Error404 from './components/Error404';
-
+import './App.css';
 const backgroundStyle = {
   backgroundPosition: 'center center',
   height: '100vh',
@@ -37,9 +37,19 @@ class App extends React.Component {
   }
   
   render(){
+    let mode = null;
+    let lights = null;
+    if (this.state.darkmode){
+      mode = 'darkmode';
+      lights = 'Lights off!';
+    } else {
+      mode = 'lightmode';
+      lights = 'Lights on!';
+    }
   return (
     
-    <div className="App" style={backgroundStyle}>
+    <div className={mode} style={backgroundStyle}>
+      <input type="checkbox" onClick={this.changemode}></input>
       <Switch>
       <Route exact path='/' component={KegList} /> 
       <Route path='/KegView' component={KegView} />
