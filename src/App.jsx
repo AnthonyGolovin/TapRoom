@@ -2,7 +2,7 @@ import { Switch, Route, } from 'react-router-dom';
 import React from 'react';
 import KegList from './components/KegList';
 import KegView from './components/KegView';
-import Error404 from './Error404';
+import Error404 from './components/Error404';
 
 const backgroundStyle = {
   backgroundPosition: 'center center',
@@ -18,7 +18,25 @@ const backgroundStyle = {
  
 }
 
-function App() {
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      darkmode : true
+    }
+    this.changemode = this.changemode.bind(this);
+  }
+
+  changemode(){
+    if(this.state.darkmode) {
+      this.setState({darkmode: false})
+    } else {
+      this.setState({darkmode: true})
+    }
+  }
+  
+  render(){
   return (
     
     <div className="App" style={backgroundStyle}>
@@ -31,5 +49,5 @@ function App() {
     
   );
 }
-
+}
 export default App;

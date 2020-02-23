@@ -1,4 +1,4 @@
-.darkmode {
+.darkmode .card {
     transition: 0.4s;
     background-color: #282c34;
     color: #61dafb !important;
@@ -8,12 +8,12 @@
     color: #61dafb !important;
 }
 
-.lightmode {
+.lightmode .card {
     transition: 0.4s;
     background-color: white;
     color: #282c34 !important;
 }
 
-.lightmode p, div, h1, h2, h3, h4{
+.lightmode p, div, h1, h2, h3, h4 {
     color: #282c34 !important;
 }
