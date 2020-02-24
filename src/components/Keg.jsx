@@ -58,22 +58,22 @@ const useStyles = makeStyles({
     const bull = <span className={classes.bullet}>•</span>;
 
   return (
-      <div className="modeHolder" style={moveCard}>
+      <div style={moveCard}>
     <Card className={classes.root} variant="outlined">
-    <CardContent>
-    <hr/>
+    <CardContent className="modeHolder">
+    
     <form>
         <h3>Kegs:</h3>
             <TextField id="filled-basic" label="Search Kegs" variant="filled" />
       </form> 
-            <hr/>
+            
             {masterKegList.map((Keg, index) =>
             <div>
             <p>{Keg.names}&emsp;<Button  variant="contained" size="small" color="secondary"><Link to="/KegView">View</Link></Button></p>
             </div>
       )}
     </CardContent>
-    <hr/>
+    
     <CardActions>
       <Button   variant="contained" size="medium" color="secondary">Add to Cart</Button>
     </CardActions>
