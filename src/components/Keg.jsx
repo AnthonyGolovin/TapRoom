@@ -59,7 +59,7 @@ const useStyles = makeStyles({
 
   return (
       <div style={moveCard}>
-    <Card className={classes.root} variant="outlined">
+    <Card className={classes.root} className="modeHolder" variant="outlined">
     <CardContent className="modeHolder">
     
     <form>
@@ -74,7 +74,7 @@ const useStyles = makeStyles({
       )}
     </CardContent>
     
-    <CardActions>
+    <CardActions className="modeHolder">
       <Button   variant="contained" size="medium" color="secondary">Add to Cart</Button>
     </CardActions>
   </Card>
